@@ -62,7 +62,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   hintText: 'example@gmail.com',
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return "Please Enter Your Name";
+                      return "Please Enter Your Email";
                     } else if (emailController.text.contains("@") == false ||
                         emailController.text.contains(".") == false) {
                       return "Please Enter a valid Email";
