@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField(
-    {this.suffixIcon,this.obsecureText,
+    {this.suffixIcon,this.obsecureText=false,
     required this.textInputType,
     required this.hintText,
     required this.labelText,
@@ -15,7 +15,7 @@ class CustomTextFormField extends StatelessWidget {
   String labelText;
   String hintText;
   IconData prefixIcon;
-  bool? obsecureText;
+  bool obsecureText;
   IconData? suffixIcon;
   TextEditingController controller;
   String? Function(String?)? validator;
@@ -23,7 +23,7 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: TextFormField(
+      child: TextFormField(obscureText: obsecureText,
         controller: controller,
         validator: validator,
         keyboardType: textInputType,
