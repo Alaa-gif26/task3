@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_3/screens/flutter_map.dart';
 import 'package:task_3/screens/login_screen.dart';
-import 'package:task_3/screens/register_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +25,7 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           ),
-      home: RegisterScreen(),
+      home:  LoginScreen(),
     );
   }
 }
